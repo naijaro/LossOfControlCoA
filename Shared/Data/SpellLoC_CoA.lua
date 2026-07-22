@@ -141,6 +141,22 @@ local coaAuras = {
 	[502640] = "STUN",       -- Everfrost Scroll
 	[502641] = "STUN",       -- Everfrost Scroll
 	[502642] = "STUN",       -- Everfrost Scroll
+	[289080] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- base ability
+	[289081] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank2
+	[289082] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank3
+	[289083] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank4
+	[289084] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank5
+	[289085] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank6
+	[289086] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank7
+
+	[801104] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank1
+	[572733] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank2
+	[572734] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank3
+	[572735] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank4
+	[572736] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank5
+	[572737] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank6
+	[572738] = "ROOT",       -- Hoarfrost (ROOT or FREEZE?) -- 3s aoe root (frozen in place), on 10s cd -- rank7
+	[807822] = "ROOT",       -- Cryobrand (ROOT or FREEZE?) -- 8s root (frozen in place), usable from stealth/runeshroud
 	-- Starcaller
 	[804738] = "CHARM",      -- Siren's Song
 	[503012] = "SILENCE",    -- Slipstream            -- self silence 5s + aoe heal, on 15s cd
