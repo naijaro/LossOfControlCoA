@@ -50,6 +50,7 @@ Core\Options\Settings.lua
 Core\Options\Manager.lua
 
 Shared\Data\SpellLoC.lua
+Shared\Data\SpellLoC_CoA.lua
 Shared\API_LossOfControl.lua
 
 Modules\LossOfControlFrame.xml
