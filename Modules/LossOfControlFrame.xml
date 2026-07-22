@@ -18,7 +18,8 @@
 		</Anchors>
 		<Layers>
 			<Layer level="BACKGROUND">
-				<Texture file="Interface\AddOns\LossOfControlCoA\Resources\Cooldown\LoC-ShadowBG" parentKey="blackBg">
+				<!-- texture set at runtime from Engine.Media (see LossOfControlFrame.lua) -->
+				<Texture parentKey="blackBg">
 					<Size x="256" y="58"/>
 					<Anchors>
 						<Anchor point="CENTER" x="0" y="0"/>
@@ -26,7 +27,7 @@
 					<Color r="1.0" g="1.0" b="1.0" a="0.6"/>
 				</Texture>
 
-				<Texture file="Interface\AddOns\LossOfControlCoA\Resources\Cooldown\Loc-RedLine" parentKey="RedLineTop">
+				<Texture parentKey="RedLineTop">
 					<Size x="236" y="27"/>
 					<Anchors>
 						<Anchor point="BOTTOM" relativePoint="TOP" x="0" y="0"/>
@@ -40,7 +41,7 @@
 					</Animations>
 				</Texture>
 
-				<Texture file="Interface\AddOns\LossOfControlCoA\Resources\Cooldown\Loc-RedLine" parentKey="RedLineBottom">
+				<Texture parentKey="RedLineBottom">
 					<Size x="236" y="27"/>
 					<Anchors>
 						<Anchor point="TOP" relativePoint="BOTTOM" x="0" y="0"/>
@@ -91,7 +92,8 @@
 				<SwipeTexture>
 					<Color r="0.17" g="0" b="0" a="0.8"/>
 				</SwipeTexture>
-				<!-- <EdgeTexture file="Interface\AddOns\LossOfControlCoA\Resources\Cooldown\UI-HUD-ActionBar-LoC"/> -->
+				<!-- If re-enabling the edge texture, set it from Lua instead of hardcoding a path:
+				     frame.Cooldown:SetEdgeTexture(Engine.Media.TEXTURE_COOLDOWN_EDGE) -->
 			</Cooldown>
 
 			<Frame parentKey="TimeLeft">

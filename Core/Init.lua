@@ -64,6 +64,13 @@ end
 local ADDON_PATH = "Interface\\AddOns\\" .. AddOnName;
 Engine.Media = Engine.Media or {
 	SOUND_ALERT = ADDON_PATH .. "\\Resources\\Sound\\alert_ma_arcanemissles.ogg",
+
+	-- Alert frame textures. Built from the addon's own folder name (AddOnName)
+	-- so renaming the AddOns folder never breaks texture loading. Applied in
+	-- Modules\LossOfControlFrame.lua (InitFrame) via SetTexture.
+	TEXTURE_SHADOW_BG     = ADDON_PATH .. "\\Resources\\Cooldown\\LoC-ShadowBG",
+	TEXTURE_RED_LINE      = ADDON_PATH .. "\\Resources\\Cooldown\\Loc-RedLine",
+	TEXTURE_COOLDOWN_EDGE = ADDON_PATH .. "\\Resources\\Cooldown\\UI-HUD-ActionBar-LoC",
 };
 
 --@loader

@@ -28,6 +28,7 @@ local PlaySoundFile = PlaySoundFile;
 
 
 --@media
+local Media = Engine.Media;
 local SOUND_ALERT = Engine.Media.SOUND_ALERT;
 
 --@constants
@@ -90,6 +91,16 @@ function LossOfControlFrameMixin:InitFrame(frame)
 	frame:Hide();
 	frame.updateTick = 0;
 	frame.isUpdating = false;
+
+	-- Resolve alert textures at runtime from the addon's own folder path
+	-- (Engine.Media). Kept out of the .xml so renaming the AddOns folder can't
+	-- break texture loading. Note: SetTexture resets texcoords, so the
+	-- RedLineBottom vertical flip is re-applied after.
+	frame.blackBg:SetTexture(Media.TEXTURE_SHADOW_BG);
+	frame.RedLineTop:SetTexture(Media.TEXTURE_RED_LINE);
+	frame.RedLineTop:SetTexCoord(0, 1, 0, 1);
+	frame.RedLineBottom:SetTexture(Media.TEXTURE_RED_LINE);
+	frame.RedLineBottom:SetTexCoord(0, 1, 1, 0);
 
 	-- text height must be set after first render
 	frame.TimeLeft.numberWidth = 0;
