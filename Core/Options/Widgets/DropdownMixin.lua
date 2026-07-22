@@ -59,14 +59,24 @@ do
 		end
 		active = dd;
 
+		local menu = dd.menu;
+
+		-- Re-assert layering on every open. The owning button's frame level
+		-- rises after the options panel is shown or re-focused, so a strata/
+		-- level fixed at build time drops the popup behind the window on the
+		-- second and later opens. Recomputing here keeps it in front.
+		menu:SetFrameStrata("FULLSCREEN_DIALOG");
+		menu:SetFrameLevel(dd.dropdown:GetFrameLevel() + 20);
+
 		local cc = GetCatcher();
+		cc:SetFrameStrata(menu:GetFrameStrata());
 		cc:Show();
 
-		-- catcher fix level
-		local level = (dd.menu:GetFrameLevel() - 1);
+		-- catcher sits one level below the menu, in the same strata
+		local level = (menu:GetFrameLevel() - 1);
 		cc:SetFrameLevel(level > 0 and level or 1);
 
-		dd.menu:Show();
+		menu:Show();
 	end
 
 	function DropdownManager.Close(dd)

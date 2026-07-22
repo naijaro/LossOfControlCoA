@@ -497,7 +497,7 @@ function Factory:CreateDropdownWidget(parent, options)
 	local menu = CreateFrame("Frame", nil, UIParent, BackdropTemplate);
 	menu:SetPoint("TOPLEFT", dd, "BOTTOMLEFT", 0, -2);
 	menu:SetPoint("TOPRIGHT", dd, "BOTTOMRIGHT", 0, -2);
-	menu:SetFrameStrata("DIALOG");
+	menu:SetFrameStrata("FULLSCREEN_DIALOG");
 	menu:SetFrameLevel(dd:GetFrameLevel() + 20);
 	menu:EnableMouse(true);
 	menu:SetClampedToScreen(true);
