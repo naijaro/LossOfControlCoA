@@ -1,0 +1,60 @@
+## Interface: 30300, 11508, 11507, 20505, 30405, 38000, 40402, 50503, 50502, 120000, 120001
+## Title: |cffff8000Loss of Control CoA|r
+## Author: s0high, Naijaro/MaxQuest (CoA fork)
+## Version: 2.1.0
+## X-Website: https://github.com/naijaro/LossOfControlCoA
+## X-Category: Combat, Buffs & Debuffs
+## X-License: GPLv3
+## X-Localizations: enUS, ruRU, deDE, frFR, esES, itIT, ptBR, zhCN, zhTW, koKR
+## SavedVariables: LoCDB
+
+## Notes: Displays loss of control effects with duration timer (Stun, Fear, Silence, etc.)
+## Notes-ruRU: Отображает эффекты потери контроля с таймером (Оглушение, Страх, Немота и др.)
+## Notes-deDE: Zeigt Kontrollverlust-Effekte mit Timer an (Betäubung, Furcht, Stille usw.)
+## Notes-frFR: Affiche les effets de perte de contrôle avec minuterie (étourdissement, Peur, Silence, etc.)
+## Notes-esES: Muestra efectos de pérdida de control con temporizador (Aturdimiento, Miedo, Silencio, etc.)
+## Notes-esMX: Muestra efectos de pérdida de control con temporizador (Aturdimiento, Miedo, Silencio, etc.)
+## Notes-itIT: Mostra gli effetti di perdita di controllo con timer (Stordimento, Paura, Silenzio, ecc.)
+## Notes-ptBR: Exibe efeitos de perda de controle com temporizador (Atordoamento, Medo, Silêncio, etc.)
+## Notes-zhCN: 显示失控效果及计时器（昏迷、恐惧、沉默等）
+## Notes-zhTW: 顯示失控效果及計時器（昏迷、恐懼、沉默等）
+## Notes-koKR: 제어 불가 효과를 타이머와 함께 표시 (기절, 공포, 침묵 등)
+
+
+Core\Init.lua
+Core\DB.lua
+Core\Events.lua
+Core\Dispatcher.lua
+Core\Utils.lua
+Core\Localization.lua
+Core\Compat.lua
+Core\Commands.lua
+
+Shared\Data\Constants.lua
+
+Core\Options\Utils.lua
+Core\Options\Compat.lua
+
+Core\Options\Widgets\Init.lua
+Core\Options\Widgets\ScrollListMixin.lua
+Core\Options\Widgets\DropdownMixin.lua
+Core\Options\Widgets\LayoutMixin.lua
+
+Core\Options\Widgets\AuraManager\AuraManagerData.lua
+Core\Options\Widgets\AuraManager\AuraManagerController.lua
+Core\Options\Widgets\AuraManager\AuraManager.lua
+
+Core\Options\Handlers.lua
+Core\Options\Legacy.lua
+Core\Options\Settings.lua
+Core\Options\Manager.lua
+
+Shared\Data\SpellLoC.lua
+Shared\Data\SpellLoC_CoA.lua
+Shared\API_LossOfControl.lua
+
+Modules\LossOfControlFrame.xml
+Modules\LossOfControlTracker.lua
+Modules\LossOfControlFrame.lua
+Modules\Schema.lua
+
