@@ -18,7 +18,7 @@
 		</Anchors>
 		<Layers>
 			<Layer level="BACKGROUND">
-				<Texture file="Interface\AddOns\LossOfControl\Resources\Cooldown\LoC-ShadowBG" parentKey="blackBg">
+				<Texture file="Interface\AddOns\LossOfControlCoA\Resources\Cooldown\LoC-ShadowBG" parentKey="blackBg">
 					<Size x="256" y="58"/>
 					<Anchors>
 						<Anchor point="CENTER" x="0" y="0"/>
@@ -26,7 +26,7 @@
 					<Color r="1.0" g="1.0" b="1.0" a="0.6"/>
 				</Texture>
 
-				<Texture file="Interface\AddOns\LossOfControl\Resources\Cooldown\Loc-RedLine" parentKey="RedLineTop">
+				<Texture file="Interface\AddOns\LossOfControlCoA\Resources\Cooldown\Loc-RedLine" parentKey="RedLineTop">
 					<Size x="236" y="27"/>
 					<Anchors>
 						<Anchor point="BOTTOM" relativePoint="TOP" x="0" y="0"/>
@@ -40,7 +40,7 @@
 					</Animations>
 				</Texture>
 
-				<Texture file="Interface\AddOns\LossOfControl\Resources\Cooldown\Loc-RedLine" parentKey="RedLineBottom">
+				<Texture file="Interface\AddOns\LossOfControlCoA\Resources\Cooldown\Loc-RedLine" parentKey="RedLineBottom">
 					<Size x="236" y="27"/>
 					<Anchors>
 						<Anchor point="TOP" relativePoint="BOTTOM" x="0" y="0"/>
@@ -91,7 +91,7 @@
 				<SwipeTexture>
 					<Color r="0.17" g="0" b="0" a="0.8"/>
 				</SwipeTexture>
-				<!-- <EdgeTexture file="Interface\AddOns\LossOfControl\Resources\Cooldown\UI-HUD-ActionBar-LoC"/> -->
+				<!-- <EdgeTexture file="Interface\AddOns\LossOfControlCoA\Resources\Cooldown\UI-HUD-ActionBar-LoC"/> -->
 			</Cooldown>
 
 			<Frame parentKey="TimeLeft">
