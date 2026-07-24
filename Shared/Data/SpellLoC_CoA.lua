@@ -54,6 +54,7 @@ local coaAuras = {
 	[560110] = "FEAR",       -- Madness
 	[560963] = "BANISH",     -- Shackle The Unrepentant
 	[805114] = "HORROR",     -- Mass Nightmare        -- 5s aoe horror, on 3 min cd
+	[800430] = "SNARE",      -- Entropic Singularity (SLOW)  -- 5s aoe slow of variable intensity, on 1 min cd
 	-- Felsworn
 	[560284] = "HORROR",     -- Infernal -- 3-4s aoe horror, on 45s cd
 	[704371] = 'SNARE',      -- Cripple -- slow ms and casting speed by 60%, decaying over 12 sec, no cd
@@ -86,6 +87,7 @@ local coaAuras = {
 	[803185] = "STUN",       -- Chains of Malice      -- 5s dragging stun on 1 min cd
 	-- Necromancer
 	[500326] = "ROOT",       -- Bonefreeze            -- (Freeze in place)
+	[805386] = "ROOT",       -- Bone Frozen (ROOT)    -- utility effect for Bonefreeze?
 	[500341] = "BANISH",     -- Entomb                -- 4s banish on 1 min cd
 	[800706] = "FEAR",       -- Ghoulify
 	[803741] = "FEAR",       -- Mass Grave
@@ -100,6 +102,19 @@ local coaAuras = {
 	[501990] = "ROOT",       -- Black Ice
 	[501991] = "ROOT",       -- Black Ice
 	[801746] = "ROOT",       -- Black Ice             -- effect
+  [801722] = "SNARE",      -- Lichfrost             -- 35-50% slow for 3s -- rank1
+	[501969] = "SNARE",      -- Lichfrost             -- 35-50% slow for 3s -- rank2
+	[501970] = "SNARE",      -- Lichfrost             -- 35-50% slow for 4s -- rank3
+	[501971] = "SNARE",      -- Lichfrost             -- 35-50% slow for 4s -- rank4
+	[501972] = "SNARE",      -- Lichfrost             -- 35-50% slow for 5s -- rank5
+	[501973] = "SNARE",      -- Lichfrost             -- 35-50% slow for 5s -- rank6
+	[501974] = "SNARE",      -- Lichfrost             -- 35-50% slow for 5s -- rank7
+	[501975] = "SNARE",      -- Lichfrost             -- 35-50% slow for 5s -- rank8
+	[501976] = "SNARE",      -- Lichfrost             -- 35-50% slow for 5s -- rank9
+	[501977] = "SNARE",      -- Lichfrost             -- 35-50% slow for 5s -- rank10
+	[501978] = "SNARE",      -- Lichfrost             -- 35-50% slow for 6s -- rank11
+	[501979] = "SNARE",      -- Lichfrost             -- 35-50% slow for 6s -- rank12
+	[501980] = "SNARE",      -- Lichfrost             -- 35-50% slow for 6s -- rank13
 	-- Primalist
 	[800145] = "INCAP",      -- Grip                  -- 8s incapacitate, 1.5s cast
 	-- Pyromancer
@@ -170,21 +185,35 @@ local coaAuras = {
 	[801135] = "STUN",       -- Starshatter           -- inline 5s stun, on 1 min cd
 	[805546] = "SLEEP",      -- Moonlit Slumber       -- 6s sleep, on 1 min cd
 	[806156] = "SILENCE",    -- Astral Armor          -- 3s silence
+	[804386] = "ROOT",       -- Command (REVERSE-ROOT) -- this is a reverse root, for 3s targeted enemy player cannot stop moving, on 8s cd (meanwhile vs mobs this is just a taunt)
+	[805575] = "ROOT",       -- Command (REVERSE-ROOT or STUN?) -- utility effect for Command 
 	-- Stormbringer
 	[707044] = "FEAR",       -- Storm Alert           -- 8s fear with 2.0s cast
 	[707905] = "FEAR",       -- Storm Alert           -- 8s fear with 1.8s cast
 	[707906] = "FEAR",       -- Storm Alert           -- 8s fear with 1.7s cast
 	[801871] = "ROOT",       -- Thunder Prison Unused
 	[804419] = "INCAP",	     -- Stasis                -- 8s incapacitate, instant, on 1 min cd
+	[500928] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank1
+	[501403] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank2
+	[501404] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank3
+	[501405] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank4
+	[501406] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank5
+	[501407] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank6
+	[501408] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank7
+	[501409] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank8
+	[501410] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank9
+	[501411] = "SNARE",      -- Volt                  -- 40% slow and dot for 18s -- rank10
 	-- Sun Cleric
 	[805583] = "STUN",       -- Glare                 -- 5s aoe stun on 2 min cd
 	[560764] = "INCAP",      -- Celestial Impact      -- OBSOLETE?
+	[800050] = "INCAP",	     -- Dazzled (INCAP)       -- 2s disorient/pacify effect
 	-- Templar
 	[560116] = "SILENCE",    -- Interdict             -- 6s silence on 2 min cd (undead/demons also cannot be healed)
 	[806121] = "INCAP",      -- Judgement Day
 	-- Tinker
 	[804861] = "SILENCE",    -- Anti-Magic Grenades   -- aoe silence 4s, on 2 min cd, dispels 3 beneficial magic
 	[806173] = "STUN",       -- Drill Smash           -- 4s stun, on 30s cd
+	[806160] = "ROOT",	     -- Freeze Ray (ROOT)     -- 6s freeze/root -- OBSOLETE?
 	-- Venomancer
 	[504335] = "STUN",	     -- Web Wrap (STUN)       -- 5s stun, on 1 min cd
 	[800876] = "SNARE",	     -- Web Wrap (SLOW)       -- 4s channeled ms slow on 20s cd (plus 30% dmg increase), rank1
@@ -205,6 +234,7 @@ local coaAuras = {
 	[502895] = "ROOT",       -- Spindlebind
 	[800887] = "ROOT",       -- Spindlebind
 	[800877] = "STUN",       -- Shadra's Binding
+	[800877] = "SNARE",      -- Shadra's Lair (SLOW)  -- 60% ms slow, and inability to target into or out of the Layer, for 8s, on 3 min cd
 	[704235] = "DISARM",     -- Pinch                 -- disarm 5s on 1 min cd
 	[804967] = "ROOT",       -- Venocannon            -- self root on 1 min cd -- OBSOLETE?
 	-- Witch Doctor
@@ -219,9 +249,12 @@ local coaAuras = {
 	[500089] = "SILENCE",    -- Subjugate             -- 4s silence + 40% ms slow, on 1 min cd
 	[802139] = "STUN",       -- Darkslayer's Lantern  -- 5s aoe stun, on 2 min cd
 	[805756] = "SNARE",      -- Smoke Grenade         -- 8s snare + untargetable in/out of cloud, on 2 min cd
+	[500093] = 'SNARE',      -- Bola Throw (SNARE)    -- 8s slow for 50%, on 15s cd
+	[800161] = 'SNARE',      -- Crippling Bolt (SNARE)-- 5s slow for 50%, can only be used after Coiling Shot
 	-- Other
 	[800013] = "STUN",       -- Facehug               -- 3s stun on 1 min cd -- MINDBENDER?
 	[800354] = "POLYMORPH",  -- Enslave               -- 8s poly with 1.7s cast -- MINDBENDER?
+	[805480] = "STUN",	     -- Path of Flames (STUN) -- 3s stun on 1 min cd
 	[800950] = "SILENCE",    -- Deathmatch            -- banish self and target for 6s on 1 min cd
 	[803531] = "SILENCE",    -- Deathmatch            -- banish self and target for 6s on 1 min cd
 };
