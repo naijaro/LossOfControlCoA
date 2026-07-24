@@ -1,7 +1,7 @@
 ## Interface: 30300, 11508, 11507, 20505, 30405, 38000, 40402, 50503, 50502, 120000, 120001
 ## Title: |cffff8000Loss of Control CoA|r
 ## Author: s0high, Naijaro/MaxQuest (CoA fork)
-## Version: 2.1.0
+## Version: 2.1.1
 ## X-Website: https://github.com/naijaro/LossOfControlCoA
 ## X-Category: Combat, Buffs & Debuffs
 ## X-License: GPLv3
