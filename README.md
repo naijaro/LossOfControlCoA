@@ -1,6 +1,11 @@
-# Loss of Control (with support for Conquest of Azeroth from Ascension WoW)
+# Loss of Control (with CoA support)
+CoA - stands for Conquest of Azeroth from Ascension WoW that added 21 custom classes.
 
 ![Loss of Control Preview](https://github.com/user-attachments/assets/136f150e-c85c-495e-bb9a-995ee2331551)
+
+<img width="250" height="104" alt="image" src="https://github.com/user-attachments/assets/e53b1f2f-ff58-4c63-969a-9bb062c3434e" />
+
+
 <!-- Badges Block -->
 <p align="left">
   <!-- WoW Version -->
