@@ -41,9 +41,9 @@ It displays crowd control (CC) effects (Stun, Fear, Silence, Disarm, etc.) with 
 
 ## 📂 Installation
 
-1.  Download the **[Latest Release](https://github.com/s0h2x/LossOfControl/releases/latest)** (zip file).
+1.  Download the **[Latest Release](https://github.com/naijaro/LossOfControlCoA/releases/latest)** (zip file).
 2.  Extract `LossOfControl`.zip into `World of Warcraft\Interface\AddOns\` directory.
-3.  After extraction, the addon must be located here: `Interface\AddOns\LossOfControl\LossOfControl.toc`.
+3.  After extraction, the addon must be located here: `Interface\AddOns\LossOfControlCoA\LossOfControlCoA.toc`.
 4.  Restart World of Warcraft.
 
 ## ⚙️ Commands
