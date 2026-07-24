@@ -1,4 +1,4 @@
-# Loss of Control
+# Loss of Control (with support for Conquest of Azeroth from Ascension WoW)
 
 ![Loss of Control Preview](https://github.com/user-attachments/assets/136f150e-c85c-495e-bb9a-995ee2331551)
 <!-- Badges Block -->
